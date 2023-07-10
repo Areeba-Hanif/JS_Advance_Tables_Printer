@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TIMES TABLE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>TIMES TABLES</h1>
+	  <form onsubmit="calculate(); return false;">
+       <input type="number" name="number" placeholder="Enter a number Here !" id="userinput1" 
+	   class="btn" min="1" max="100"/>
+     	<input type="number" name="number" placeholder="Enter starting point Here !" id="userinput2" class="btn" min="1" max="100"
+		 />
+     	<input type="number" name="number" placeholder="Enter ending point Here !" id="userinput3" class="btn" min="1" max="100" />
+     	<p><button type="submit" class="btn" >PRINT TABLE</button></p>
+     	<p><button type="RESET" class="btn">Clear</button></p>
+     	<h3 id="result"></h3>
+     	
+
+
+
+
+
+
+     </form>
+
+    
+
+
+
+
+</div>
+
+    <script >
+    	function calculate() {
+    		let table = +document.querySelector("#userinput1").value;
+    		let start = +document.querySelector("#userinput2").value;
+    		let end = +document.querySelector("#userinput3").value;
+          
+        
+            for (let i = start ; i<=end; i++) {
+            	document.querySelector("#result").innerHTML+=`${table+"x" + i +"="+table*i+ "<br>"}`;
+                
+            	
+            }
+        }
+ 
+    	
+    </script>
+</body>
+</html>
